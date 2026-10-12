@@ -1,0 +1,118 @@
+name: 更新股價與財報
+
+on:
+  schedule:
+    # 平日台北時間 15:17（收盤後）：更新股價、市值與估值指標
+    - cron: "17 7 * * 1-5"
+    # 每週日台北時間 02:43：更新完整財報（年度 + 季度）與估值
+    - cron: "43 18 * * 6"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "更新內容：valuation = 股價與估值（約 40 分鐘），financials = 完整財報（約 2 小時）"
+        type: choice
+        options: [valuation, financials]
+        default: valuation
+      scope:
+        description: "只更新這些代號，以空白分隔（例如 2330 2454）；留空 = 全部"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Choose what to update
+        id: plan
+        env:
+          EVENT: ${{ github.event_name }}
+          SCHEDULE: ${{ github.event.schedule }}
+          INPUT_MODE: ${{ inputs.mode }}
+          INPUT_SCOPE: ${{ inputs.scope }}
+        run: |
+          if [ "$EVENT" = "workflow_dispatch" ]; then
+            mode="$INPUT_MODE"
+          elif [ "$SCHEDULE" = "43 18 * * 6" ]; then
+            mode=financials
+          else
+            mode=valuation
+          fi
+          scope="$(echo "$INPUT_SCOPE" | xargs)"
+          if [ -n "$scope" ] && ! [[ "$scope" =~ ^[0-9]{4}( [0-9]{4})*$ ]]; then
+            echo "::error::代號格式錯誤：「$scope」。請輸入 4 位數代號，以空白分隔。"
+            exit 1
+          fi
+          echo "mode=$mode" >> "$GITHUB_OUTPUT"
+          echo "scope=$scope" >> "$GITHUB_OUTPUT"
+
+      - name: Fetch data from Yahoo Finance
+        env:
+          MODE: ${{ steps.plan.outputs.mode }}
+          SCOPE: ${{ steps.plan.outputs.scope }}
+        run: |
+          # shellcheck disable=SC2086  # SCOPE is a validated list of tickers
+          python scripts/update_${MODE}.py $SCOPE | tee update.log
+          summary="$(grep '^Done\.' update.log || echo 'Done. (no summary)')"
+          echo "### ${MODE}：${summary}" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Rebuild index, themes, network and web data
+        run: |
+          python scripts/build_wikilink_index.py
+          python scripts/build_themes.py
+          python scripts/build_network.py
+          python scripts/build_web.py
+
+      - name: Commit and push changes
+        id: commit
+        env:
+          MODE: ${{ steps.plan.outputs.mode }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "沒有資料變動，不需要提交。" >> "$GITHUB_STEP_SUMMARY"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          label=$([ "$MODE" = financials ] && echo "財報與估值" || echo "股價與估值")
+          git commit -q -m "自動更新${label}（$(TZ=Asia/Taipei date +%Y-%m-%d)）"
+          git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Rebuild GitHub Pages
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Pushes made with GITHUB_TOKEN do not start a Pages build on their own
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" >/dev/null \
+            || echo "::warning::無法觸發 Pages 重新建置，網站會在下一次推送時更新。"
+
+      - name: Fail if nothing could be fetched
+        run: |
+          if grep -q '^Done\. Updated: 0 ' update.log; then
+            echo "::error::Yahoo Finance 沒有回傳任何資料（可能暫時封鎖或改版）。報告未被修改。"
+            exit 1
+          fi

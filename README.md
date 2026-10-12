@@ -92,6 +92,17 @@ python scripts/update_valuation.py --sector Semiconductors      # By sector
 python scripts/update_valuation.py                              # ALL tickers
 ```
 
+### Automatic Updates (GitHub Actions)
+
+`.github/workflows/update-data.yml` refreshes data on GitHub's runners and commits the result to `main`:
+
+| When (Taipei time) | What |
+|---|---|
+| Weekdays 15:17, after market close | `update_valuation.py`: price, market cap, P/E, P/B, EV/EBITDA |
+| Sundays 02:43 | `update_financials.py`: annual and quarterly financial tables plus valuation |
+
+After each update it rebuilds `WIKILINKS.md`, `themes/`, `network/` and `web/data/`, then triggers a GitHub Pages rebuild. Run it by hand from **Actions → 更新股價與財報 → Run workflow**, optionally limited to specific tickers.
+
 ### Update Enrichment Content
 
 Prepare a JSON file with enrichment data, then apply:
