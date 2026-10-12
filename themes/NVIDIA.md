@@ -108,7 +108,7 @@
 - **3540 曜越** (Electronics & Computer Distribution)
 - **6123 上奇** (Electronics & Computer Distribution)
 - **6189 豐藝** (Electronics & Computer Distribution)
-- **6776 展�眥篕�** (Electronics & Computer Distribution)
+- **6776 展碁國際** (Electronics & Computer Distribution)
 - **2059 川湖** (Furnishings, Fixtures & Appliances)
 - **6584 南俊國際** (Furnishings, Fixtures & Appliances)
 - **6223 旺矽** (Semiconductor Equipment & Materials)

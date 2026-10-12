@@ -1,0 +1,549 @@
+<meta charset="utf-8">
+<title>台股供應鏈資料庫</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;900&display=swap">
+<style>
+/* Layout: research terminal — a filterable ticker ledger on the left, the open report on the right; copper marks the company in focus, the supply chain reads slate (upstream) → copper (midstream) → green (downstream). */
+:root {
+  --bg: #edf0ef;
+  --panel: #fafbfa;
+  --sunk: #e3e8e6;
+  --ink: #17211f;
+  --muted: #5b6966;
+  --line: #d3dbd8;
+  --accent: #a9531f;
+  --accent-soft: #f3e2d6;
+  --up: #3b5888;
+  --down: #2a7656;
+  --material: #8f6c12;
+  --app: #74437f;
+  --focus: #a9531f;
+  --display: "Noto Serif TC", "Songti TC", "PMingLiU", serif;
+  --body: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #101615; --panel: #172120; --sunk: #0c1110; --ink: #e3eae8; --muted: #93a39f;
+    --line: #2a3634; --accent: #e3925e; --accent-soft: #3a2619; --up: #8eaad9; --down: #6cc49b;
+    --material: #d6b257; --app: #c897d3; --focus: #e3925e; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #101615; --panel: #172120; --sunk: #0c1110; --ink: #e3eae8; --muted: #93a39f;
+  --line: #2a3634; --accent: #e3925e; --accent-soft: #3a2619; --up: #8eaad9; --down: #6cc49b;
+  --material: #d6b257; --app: #c897d3; --focus: #e3925e; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 15px/1.65 var(--body); }
+button, input, select { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.wrap { max-width: 1320px; margin: 0 auto; padding-inline: 16px; padding-block: 0 48px; }
+
+header.top { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 24px; padding-block: 22px 14px; border-bottom: 1px solid var(--line); }
+.brand h1 { font: 900 clamp(22px, 3vw, 30px)/1.15 var(--display); margin: 0; letter-spacing: .02em; text-wrap: balance; }
+.brand p { margin: 4px 0 0; color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.brand p b { color: var(--ink); font-family: var(--mono); font-weight: 600; }
+nav.tabs { display: flex; gap: 4px; overflow-x: auto; max-width: 100%; }
+nav.tabs button { border: 0; background: none; padding: 8px 14px; border-radius: 6px; cursor: pointer; color: var(--muted); font-weight: 500; white-space: nowrap; }
+nav.tabs button:hover { color: var(--ink); background: var(--sunk); }
+nav.tabs button[aria-selected="true"] { color: var(--ink); background: var(--panel); box-shadow: inset 0 -2px 0 var(--accent); }
+
+.view { padding-top: 18px; }
+.split { display: grid; grid-template-columns: minmax(280px, 360px) minmax(0, 1fr); gap: 18px; align-items: start; }
+@media (max-width: 860px) { .split { grid-template-columns: minmax(0, 1fr); } }
+
+.side { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 12px); display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+@media (max-width: 860px) { .side { position: static; } }
+.field { width: 100%; padding: 9px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); }
+.field::placeholder { color: var(--muted); }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.count { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.list { list-style: none; margin: 0; padding: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; max-height: calc(100vh - 260px); min-height: 240px; overflow-y: auto; }
+@media (max-width: 860px) { .list { max-height: 340px; } }
+.list li button { display: grid; grid-template-columns: 46px minmax(0, 1fr) auto; gap: 10px; align-items: baseline; width: 100%; text-align: left; border: 0; background: none; padding: 8px 12px; border-bottom: 1px solid var(--line); cursor: pointer; }
+.list li:last-child button { border-bottom: 0; }
+.list li button:hover { background: var(--sunk); }
+.list li button[aria-current="true"] { background: var(--accent-soft); }
+.tk { font: 600 13px var(--mono); color: var(--accent); font-variant-numeric: tabular-nums; }
+.nm { font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nm small { display: block; font-weight: 400; color: var(--muted); font-size: 12px; overflow: hidden; text-overflow: ellipsis; }
+.cap { font: 12px var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.more { width: 100%; border: 0; padding: 10px; background: none; color: var(--accent); cursor: pointer; font-weight: 500; }
+
+.pane { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: clamp(16px, 3vw, 32px); min-width: 0; }
+.crumbs { display: flex; gap: 8px; align-items: center; margin-bottom: 10px; min-height: 24px; }
+.back { border: 1px solid var(--line); background: none; border-radius: 6px; padding: 2px 10px; cursor: pointer; color: var(--muted); font-size: 13px; }
+.back:hover { color: var(--ink); }
+.co-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; }
+.co-head .big { font: 600 clamp(26px, 4vw, 38px)/1 var(--mono); color: var(--accent); }
+.co-head h2 { font: 900 clamp(26px, 4vw, 38px)/1.1 var(--display); margin: 0; }
+.co-sub { color: var(--muted); margin: 6px 0 16px; font-size: 14px; }
+.metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; margin-bottom: 8px; }
+.metrics div { background: var(--panel); padding: 10px 14px; }
+.metrics dt { font-size: 11px; letter-spacing: .08em; color: var(--muted); }
+.metrics dd { margin: 2px 0 0; font: 600 17px var(--mono); font-variant-numeric: tabular-nums; }
+.asof { font-size: 12px; color: var(--muted); margin: 0 0 8px; }
+
+.md { max-width: 78ch; }
+.md h2 { font: 600 19px/1.3 var(--display); margin: 30px 0 10px; padding-top: 14px; border-top: 1px solid var(--line); }
+.md h3 { font-size: 15px; margin: 20px 0 6px; }
+.md p, .md li { margin: 6px 0; }
+.md ul { padding-left: 1.2em; }
+.md blockquote { margin: 8px 0; padding: 6px 14px; border-left: 3px solid var(--accent); color: var(--muted); background: var(--sunk); border-radius: 0 6px 6px 0; }
+.md hr { border: 0; border-top: 1px solid var(--line); }
+.md strong.up, .md strong.mid, .md strong.down { display: inline-block; font-size: 13px; letter-spacing: .04em; padding: 1px 10px; border-radius: 4px; color: var(--panel); margin-top: 8px; }
+.md strong.up { background: var(--up); }
+.md strong.mid { background: var(--accent); }
+.md strong.down { background: var(--down); }
+.tbl { overflow-x: auto; max-width: 100%; margin: 8px 0 14px; }
+.md table { border-collapse: collapse; font: 12.5px var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.md th, .md td { padding: 5px 10px; border-bottom: 1px solid var(--line); text-align: right; }
+.md th:first-child, .md td:first-child { text-align: left; font-family: var(--body); }
+.md thead th { color: var(--muted); font-weight: 500; }
+.fin { max-width: none; }
+
+a.wl { color: inherit; text-decoration: none; border-bottom: 1px dotted var(--muted); cursor: pointer; }
+a.wl:hover { color: var(--accent); border-bottom-color: var(--accent); }
+a.wl.co { border-bottom: 1px solid var(--accent); }
+a.cl { color: var(--accent); cursor: pointer; text-decoration: none; font-weight: 600; }
+a.cl:hover { text-decoration: underline; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { border: 1px solid var(--line); background: var(--panel); border-radius: 999px; padding: 3px 11px; font-size: 13px; cursor: pointer; }
+.chip:hover { border-color: var(--accent); color: var(--accent); }
+.chip i { font-style: normal; font: 11px var(--mono); color: var(--muted); margin-left: 4px; }
+.chip.on { background: var(--accent); border-color: var(--accent); color: var(--panel); }
+.chip.on i { color: inherit; }
+
+.ent-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; }
+.ent-head h2 { font: 900 clamp(24px, 4vw, 34px)/1.15 var(--display); margin: 0; }
+.kind { font-size: 12px; letter-spacing: .06em; padding: 2px 9px; border-radius: 4px; background: var(--sunk); color: var(--muted); }
+.group h3 { font: 600 15px var(--display); margin: 22px 0 6px; display: flex; gap: 8px; align-items: baseline; }
+.group h3 span { font: 12px var(--mono); color: var(--muted); }
+.rows { width: 100%; border-collapse: collapse; font-size: 14px; }
+.rows td { padding: 7px 8px; border-bottom: 1px solid var(--line); vertical-align: baseline; }
+.rows tr { cursor: pointer; }
+.rows tr:hover td { background: var(--sunk); }
+.rows .tk { width: 52px; }
+.rows .cap { text-align: right; }
+.rows .ind { color: var(--muted); font-size: 12.5px; }
+.tags { white-space: nowrap; }
+.tag { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-left: 3px; }
+.tag.b1 { background: var(--accent); } .tag.b2 { background: var(--up); } .tag.b4 { background: var(--down); }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12px; color: var(--muted); margin-top: 8px; }
+.legend span { display: inline-flex; align-items: center; gap: 5px; }
+@media (max-width: 560px) { .rows .ind { display: none; } }
+
+.themes { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 18px; }
+.tgroup h3 { font-size: 12px; letter-spacing: .1em; color: var(--muted); margin: 0 0 6px; font-weight: 500; }
+.tgroup ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.tgroup li button { display: flex; justify-content: space-between; width: 100%; border: 0; border-bottom: 1px solid var(--line); background: none; padding: 7px 2px; cursor: pointer; text-align: left; }
+.tgroup li button:hover, .tgroup li button[aria-current="true"] { color: var(--accent); }
+.tgroup li button i { font: normal 12px var(--mono); color: var(--muted); }
+
+.graph-bar { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; margin-bottom: 10px; }
+.graph-bar label { display: flex; gap: 8px; align-items: center; font-size: 13px; color: var(--muted); }
+.graph-bar .field { width: min(260px, 100%); }
+.gl { display: flex; flex-wrap: wrap; gap: 6px; }
+.gl button { display: inline-flex; gap: 6px; align-items: center; border: 1px solid var(--line); background: var(--panel); border-radius: 999px; padding: 2px 10px; font-size: 12.5px; cursor: pointer; }
+.gl button[aria-pressed="false"] { opacity: .4; }
+.gl b { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+#graph { width: 100%; height: min(72vh, 760px); min-height: 420px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; display: block; touch-action: none; }
+#graph text { font: 11px var(--body); fill: var(--ink); pointer-events: none; paint-order: stroke; stroke: var(--panel); stroke-width: 3px; }
+#graph line { stroke: var(--muted); }
+#graph circle { cursor: pointer; stroke: var(--panel); stroke-width: 1.2px; }
+.hint { font-size: 12.5px; color: var(--muted); margin: 8px 0 0; }
+.empty { color: var(--muted); padding: 24px 0; }
+.loading { color: var(--muted); }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <h1>台股供應鏈資料庫</h1>
+      <p id="stats">載入資料中…</p>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="檢視">
+      <button role="tab" id="tab-co" data-tab="co" aria-selected="true">公司</button>
+      <button role="tab" id="tab-kw" data-tab="kw" aria-selected="false">關鍵字</button>
+      <button role="tab" id="tab-th" data-tab="th" aria-selected="false">主題</button>
+      <button role="tab" id="tab-gr" data-tab="gr" aria-selected="false">關聯圖</button>
+    </nav>
+  </header>
+
+  <section class="view" id="view-co">
+    <div class="split">
+      <div class="side">
+        <input class="field" id="co-q" type="search" placeholder="代號、公司名或關鍵字（如 2330、聯發科、CoWoS）" autocomplete="off">
+        <div class="row2">
+          <select class="field" id="co-sector" aria-label="產業"><option value="">全部產業</option></select>
+          <select class="field" id="co-sort" aria-label="排序">
+            <option value="mc">市值 大→小</option>
+            <option value="t">代號</option>
+            <option value="pe">本益比 低→高</option>
+            <option value="gm">毛利率 高→低</option>
+          </select>
+        </div>
+        <div class="count" id="co-count"></div>
+        <ul class="list" id="co-list"></ul>
+      </div>
+      <article class="pane" id="co-pane"><p class="loading">載入報告中…</p></article>
+    </div>
+  </section>
+
+  <section class="view" id="view-kw" hidden>
+    <div class="split">
+      <div class="side">
+        <input class="field" id="kw-q" type="search" placeholder="搜尋關鍵字（公司、技術、材料）" autocomplete="off">
+        <div class="count" id="kw-count"></div>
+        <ul class="list" id="kw-list"></ul>
+      </div>
+      <article class="pane" id="kw-pane"></article>
+    </div>
+  </section>
+
+  <section class="view" id="view-th" hidden>
+    <div class="split">
+      <div class="side" id="th-side"></div>
+      <article class="pane" id="th-pane"></article>
+    </div>
+  </section>
+
+  <section class="view" id="view-gr" hidden>
+    <div class="graph-bar">
+      <input class="field" id="gr-q" type="search" placeholder="在圖中尋找節點" autocomplete="off">
+      <label for="gr-w">最少共同出現 <input id="gr-w" type="range" min="5" max="40" value="8"> <b id="gr-wv" class="cap">8</b></label>
+      <div class="gl" id="gr-legend"></div>
+    </div>
+    <svg id="graph" role="img" aria-label="關鍵字共同出現網路圖"></svg>
+    <p class="hint">兩個關鍵字出現在同一份報告中即連線，線越粗表示共同出現的公司越多。點節點可查看相關公司；拖曳可移動，滾輪或雙指可縮放。</p>
+  </section>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script>
+(() => {
+  const $ = (s, r = document) => r.querySelector(s);
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const fmt = new Intl.NumberFormat("zh-TW");
+  const SEC = { 1: "核心業務", 2: "供應鏈位置", 4: "客戶與供應商" };
+  const CAT = {
+    taiwan_company: ["台灣公司", "--accent"], international_company: ["國際公司", "--up"],
+    technology: ["技術", "--down"], material: ["材料", "--material"], application: ["應用", "--app"]
+  };
+
+  let DB, rows, byT, byName, entities, entMap, sectorName = {}, graphCat = {};
+  const bundles = {};
+  const state = { tab: "co", co: null, kw: null, th: null, coLimit: 200 };
+  const hist = [];
+
+  function cap(mc) {
+    if (mc == null) return "—";
+    if (mc >= 1e6) return (mc / 1e6).toFixed(2) + " 兆";
+    if (mc >= 100) return fmt.format(Math.round(mc / 100)) + " 億";
+    return fmt.format(Math.round(mc)) + " 百萬";
+  }
+  const n2 = v => v == null ? "—" : v.toFixed(2);
+
+  async function getJSON(p) {
+    const r = await fetch(p);
+    if (!r.ok) throw new Error(p + " " + r.status);
+    return r.json();
+  }
+
+  // ---------- Markdown with wikilinks ----------
+  function md(src) {
+    const s = src.replace(/</g, "&lt;").replace(/\[\[([^\]]+)\]\]/g, (_, e) => {
+      e = e.trim();
+      const co = byName.has(e) ? " co" : "";
+      return `<a class="wl${co}" data-e="${esc(e)}">${esc(e)}</a>`;
+    }).replace(/\*\*(\d{4}) ([^*\n]+)\*\*/g, (m, t, n) =>
+      byT.has(t) ? `<a class="cl" data-t="${t}">${t} ${n}</a>` : m);
+    const html = marked.parse(s, { gfm: true });
+    const div = document.createElement("div");
+    div.innerHTML = html;
+    div.querySelectorAll("table").forEach(t => {
+      const w = document.createElement("div"); w.className = "tbl";
+      t.replaceWith(w); w.appendChild(t);
+    });
+    div.querySelectorAll("strong").forEach(b => {
+      const t = b.textContent.trim();
+      if (/^上游/.test(t)) b.className = "up";
+      else if (/^中游/.test(t)) b.className = "mid";
+      else if (/^下游/.test(t)) b.className = "down";
+    });
+    return div;
+  }
+
+  // ---------- Navigation ----------
+  function showTab(tab, push = true) {
+    if (push && state.tab !== tab) hist.push(snap());
+    state.tab = tab;
+    document.querySelectorAll("nav.tabs button").forEach(b => b.setAttribute("aria-selected", b.dataset.tab === tab));
+    ["co", "kw", "th", "gr"].forEach(k => $("#view-" + k).hidden = k !== tab);
+    if (tab === "gr") drawGraph();
+    if (tab === "kw" && !state.kw) openEntity("CoWoS", false);
+    if (tab === "th" && !state.th) openTheme(DB.themes[0].items[0].name, false);
+  }
+  const snap = () => ({ tab: state.tab, co: state.co, kw: state.kw, th: state.th });
+  function goBack() {
+    const s = hist.pop(); if (!s) return;
+    if (s.co && s.co !== state.co) openCompany(s.co, false);
+    if (s.kw && s.kw !== state.kw) openEntity(s.kw, false);
+    if (s.th && s.th !== state.th) openTheme(s.th, false);
+    showTab(s.tab, false);
+  }
+  function backBtn() {
+    return hist.length ? `<button class="back" data-back>← 返回</button>` : "";
+  }
+
+  document.addEventListener("click", e => {
+    const a = e.target.closest("[data-e],[data-t],[data-back],[data-tab],[data-theme-name]");
+    if (!a) return;
+    if (a.dataset.back !== undefined) return goBack();
+    if (a.dataset.tab && a.closest("nav")) return showTab(a.dataset.tab);
+    if (a.dataset.t) { openCompany(a.dataset.t); return showTab("co", false); }
+    if (a.dataset.e) { openEntity(a.dataset.e); return showTab("kw", false); }
+    if (a.dataset.themeName) return openTheme(a.dataset.themeName);
+  });
+
+  // ---------- Companies ----------
+  function filterRows() {
+    const q = $("#co-q").value.trim().toLowerCase();
+    const sec = $("#co-sector").value, sort = $("#co-sort").value;
+    let out = rows.filter(r => (!sec || r.f === sec) && (!q ||
+      r.t.startsWith(q) || r.n.toLowerCase().includes(q) || r.ind.toLowerCase().includes(q) ||
+      r.w.some(([e]) => e.toLowerCase() === q)));
+    const by = {
+      mc: (a, b) => (b.mc ?? -1) - (a.mc ?? -1),
+      t: (a, b) => a.t.localeCompare(b.t),
+      pe: (a, b) => (a.pe > 0 ? a.pe : 1e9) - (b.pe > 0 ? b.pe : 1e9),
+      gm: (a, b) => (b.gm ?? -1e9) - (a.gm ?? -1e9)
+    }[sort];
+    return out.sort(by);
+  }
+  function renderList() {
+    const out = filterRows();
+    const q = $("#co-q").value.trim();
+    const kwHit = q && entMap.has(q) ? `　·　<a class="cl" data-e="${esc(q)}">依供應鏈位置查看 ${esc(q)} →</a>` : "";
+    $("#co-count").innerHTML = `${fmt.format(out.length)} 家公司${kwHit}`;
+    const sort = $("#co-sort").value;
+    const right = r => sort === "pe" ? (r.pe > 0 ? "P/E " + r.pe.toFixed(1) : "—")
+      : sort === "gm" ? (r.gm != null ? r.gm.toFixed(1) + "%" : "—") : cap(r.mc);
+    $("#co-list").innerHTML = out.slice(0, state.coLimit).map(r =>
+      `<li><button data-t="${r.t}" aria-current="${r.t === state.co}"><span class="tk">${r.t}</span>` +
+      `<span class="nm">${esc(r.n)}<small>${esc(r.ind)}</small></span><span class="cap">${right(r)}</span></button></li>`
+    ).join("") + (out.length > state.coLimit
+      ? `<li><button class="more" id="co-more">再顯示 ${Math.min(200, out.length - state.coLimit)} 家（共 ${out.length}）</button></li>` : "")
+      + (out.length ? "" : `<li class="empty" style="padding:16px">找不到符合的公司。試試代號、公司名或產業。</li>`);
+    const more = $("#co-more");
+    if (more) more.onclick = e => { e.stopPropagation(); state.coLimit += 200; renderList(); };
+  }
+
+  async function openCompany(t, push = true) {
+    const r = byT.get(t); if (!r) return;
+    if (push && state.co && state.co !== t) hist.push(snap());
+    state.co = t;
+    document.querySelectorAll("#co-list button[data-t]").forEach(b => b.setAttribute("aria-current", b.dataset.t === t));
+    const pane = $("#co-pane");
+    pane.innerHTML = `<p class="loading">載入 ${t} ${esc(r.n)} 報告中…</p>`;
+    let text;
+    try {
+      bundles[r.f] ??= getJSON(`data/r/${r.f}.json`);
+      text = (await bundles[r.f])[t];
+    } catch (err) {
+      bundles[r.f] = undefined;
+      pane.innerHTML = `<p class="empty">無法載入這份報告（${esc(err.message)}）。請重新整理頁面再試一次。</p>`;
+      return;
+    }
+    if (state.co !== t) return;
+    const ev = (text.match(/\*\*企業價值:\*\*\s*([^\n]+)/) || [])[1];
+    const body = text.replace(/^# .*\n/, "").replace(/^\*\*(板塊|產業|市值|企業價值):\*\*.*\n/gm, "");
+    const parts = body.split(/\n(?=## 財務概況)/);
+    pane.innerHTML = `<div class="crumbs">${backBtn()}</div>
+      <div class="co-head"><span class="big">${t}</span><h2>${esc(r.n)}</h2></div>
+      <p class="co-sub">${esc(sectorName[r.f] || r.ind)} · ${esc(r.sec)}</p>
+      <dl class="metrics">
+        <div><dt>市值</dt><dd>${cap(r.mc)}</dd></div>
+        <div><dt>股價</dt><dd>${r.px != null ? fmt.format(r.px) : "—"}</dd></div>
+        <div><dt>本益比 TTM</dt><dd>${n2(r.pe)}</dd></div>
+        <div><dt>股價淨值比</dt><dd>${n2(r.pb)}</dd></div>
+        <div><dt>毛利率</dt><dd>${r.gm != null ? r.gm.toFixed(1) + "%" : "—"}</dd></div>
+      </dl>
+      <p class="asof">${r.asof ? "股價截至 " + r.asof : ""}${ev ? "　企業價值 " + esc(ev.trim()) : ""}　·　單位：百萬台幣</p>`;
+    const a = md(parts[0]); a.className = "md"; pane.appendChild(a);
+    if (parts[1]) { const f = md(parts[1]); f.className = "md fin"; pane.appendChild(f); }
+    if (push && matchMedia("(max-width: 860px)").matches) pane.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  // ---------- Keywords ----------
+  function renderKwList() {
+    const q = $("#kw-q").value.trim().toLowerCase();
+    const out = q ? entities.filter(e => e.e.toLowerCase().includes(q)) : entities;
+    $("#kw-count").textContent = `${fmt.format(out.length)} 個關鍵字，依提及公司數排序`;
+    $("#kw-list").innerHTML = out.slice(0, 300).map(e =>
+      `<li><button data-e="${esc(e.e)}" aria-current="${e.e === state.kw}"><span class="tk">${e.n}</span>` +
+      `<span class="nm">${esc(e.e)}<small>${kindOf(e.e)}</small></span><span></span></button></li>`).join("")
+      || `<li class="empty" style="padding:16px">沒有這個關鍵字。報告中的關鍵字以 [[ ]] 標記。</li>`;
+  }
+  function kindOf(e) {
+    if (byName.has(e)) return "上市櫃公司";
+    const c = graphCat[e]; return c ? CAT[c][0] : "";
+  }
+  function openEntity(e, push = true) {
+    const ent = entMap.get(e);
+    if (push && state.kw && state.kw !== e) hist.push(snap());
+    state.kw = e;
+    document.querySelectorAll("#kw-list button").forEach(b => b.setAttribute("aria-current", b.dataset.e === e));
+    const pane = $("#kw-pane");
+    if (!ent) { pane.innerHTML = `<div class="crumbs">${backBtn()}</div><p class="empty">沒有報告提到 [[${esc(e)}]]。</p>`; return; }
+    const self = byName.get(e);
+    const groups = { 1: [], 2: [], 4: [] };
+    ent.list.forEach(x => groups[x.m & 1 ? 1 : x.m & 2 ? 2 : 4].push(x));
+    const co = new Map();
+    ent.list.forEach(x => x.r.w.forEach(([o]) => { if (o !== e && o !== x.r.n) co.set(o, (co.get(o) || 0) + 1); }));
+    const top = [...co].sort((a, b) => b[1] - a[1]).slice(0, 16);
+    const tbl = list => `<table class="rows"><tbody>${list.sort((a, b) => (b.r.mc ?? -1) - (a.r.mc ?? -1)).map(x =>
+      `<tr data-t="${x.r.t}"><td class="tk">${x.r.t}</td><td>${esc(x.r.n)}</td><td class="ind">${esc(x.r.ind)}</td>` +
+      `<td class="cap">${cap(x.r.mc)}</td><td class="tags">${[1, 2, 4].map(b => x.m & b ? `<span class="tag b${b}" title="${SEC[b]}"></span>` : "").join("")}</td></tr>`
+    ).join("")}</tbody></table>`;
+    pane.innerHTML = `<div class="crumbs">${backBtn()}</div>
+      <div class="ent-head"><h2>${esc(e)}</h2>${kindOf(e) ? `<span class="kind">${kindOf(e)}</span>` : ""}</div>
+      <p class="co-sub">${ent.n} 家上市櫃公司的報告提到這個關鍵字${self ? `　·　<a class="cl" data-t="${self.t}">開啟 ${self.t} ${esc(self.n)} 的報告 →</a>` : ""}</p>
+      ${top.length ? `<p class="asof">常一起出現</p><div class="chips">${top.map(([o, c]) => `<button class="chip" data-e="${esc(o)}">${esc(o)}<i>${c}</i></button>`).join("")}</div>` : ""}
+      <div class="legend">${[1, 2, 4].map(b => `<span><span class="tag b${b}"></span>出現在${SEC[b]}</span>`).join("")}</div>
+      ${[[1, "核心業務相關", "公司本身的業務描述就提到"], [2, "供應鏈中的位置", "出現在上中下游段落"], [4, "客戶或供應商", "列為主要客戶或供應商"]]
+        .filter(([b]) => groups[b].length).map(([b, h]) =>
+          `<div class="group"><h3>${h}<span>${groups[b].length}</span></h3>${tbl(groups[b])}</div>`).join("")}`;
+  }
+
+  // ---------- Themes ----------
+  function renderThemeSide() {
+    $("#th-side").innerHTML = `<div class="themes" style="grid-template-columns:1fr">${DB.themes.map(g =>
+      `<div class="tgroup"><h3>${esc(g.group)}</h3><ul>${g.items.map(i =>
+        `<li><button data-theme-name="${esc(i.name)}" aria-current="${i.name === state.th}">${esc(i.name)}<i>${i.count} 家</i></button></li>`).join("")}</ul></div>`).join("")}</div>`;
+  }
+  function openTheme(name, push = true) {
+    const item = DB.themes.flatMap(g => g.items).find(i => i.name === name); if (!item) return;
+    if (push && state.th && state.th !== name) hist.push(snap());
+    state.th = name; renderThemeSide();
+    const pane = $("#th-pane");
+    pane.innerHTML = `<div class="crumbs">${backBtn()}</div>`;
+    const m = md(item.md.replace(/^> Auto-generated.*$/m, "")); m.className = "md";
+    const h1 = m.querySelector("h1");
+    if (h1) { h1.style.cssText = "font:900 clamp(24px,4vw,34px)/1.15 var(--display);margin:0 0 8px"; }
+    pane.appendChild(m);
+    if (push && matchMedia("(max-width: 860px)").matches) pane.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  // ---------- Graph ----------
+  let graphReady = false, gState;
+  function drawGraph() {
+    if (graphReady) return; graphReady = true;
+    const svg = d3.select("#graph");
+    const { width, height } = $("#graph").getBoundingClientRect();
+    svg.attr("viewBox", [-width / 2, -height / 2, width, height]);
+    const css = getComputedStyle(document.documentElement);
+    const color = c => css.getPropertyValue(CAT[c]?.[1] || "--muted").trim();
+    const nodes = DB.graph.nodes.map(d => ({ ...d }));
+    const allLinks = DB.graph.links.map(d => ({ ...d }));
+    const hidden = new Set();
+    const root = svg.append("g");
+    svg.call(d3.zoom().scaleExtent([0.2, 6]).on("zoom", ev => root.attr("transform", ev.transform)));
+    const gl = root.append("g"), gn = root.append("g");
+    const r = d => 3 + Math.sqrt(d.count) * 1.3;
+    const sim = d3.forceSimulation(nodes)
+      .force("charge", d3.forceManyBody().strength(-60))
+      .force("collide", d3.forceCollide(d => r(d) + 2))
+      .force("x", d3.forceX().strength(0.04)).force("y", d3.forceY().strength(0.06));
+    let link, node, label;
+    function update() {
+      const w = +$("#gr-w").value; $("#gr-wv").textContent = w;
+      const vis = new Set(nodes.filter(n => !hidden.has(n.category)).map(n => n.id));
+      const links = allLinks.filter(l => l.weight >= w && vis.has(l.source.id ?? l.source) && vis.has(l.target.id ?? l.target));
+      const deg = new Map(); links.forEach(l => { [l.source.id ?? l.source, l.target.id ?? l.target].forEach(id => deg.set(id, 1)); });
+      const shown = nodes.filter(n => vis.has(n.id) && deg.has(n.id));
+      link = gl.selectAll("line").data(links, l => (l.source.id ?? l.source) + "|" + (l.target.id ?? l.target))
+        .join("line").attr("stroke-opacity", 0.18).attr("stroke-width", l => Math.min(4, 0.4 + l.weight / 12));
+      node = gn.selectAll("circle").data(shown, d => d.id).join("circle")
+        .attr("r", r).attr("fill", d => color(d.category))
+        .call(d3.drag().on("start", (ev, d) => { if (!ev.active) sim.alphaTarget(0.2).restart(); d.fx = d.x; d.fy = d.y; })
+          .on("drag", (ev, d) => { d.fx = ev.x; d.fy = ev.y; })
+          .on("end", (ev, d) => { if (!ev.active) sim.alphaTarget(0); d.fx = d.fy = null; }))
+        .on("click", (ev, d) => { openEntity(d.id); showTab("kw", false); })
+        .on("mouseenter", (ev, d) => focus(d.id)).on("mouseleave", () => focus(null));
+      node.selectAll("title").data(d => [d]).join("title").text(d => `${d.id}（${d.count} 家）`);
+      label = gn.selectAll("text").data(shown.filter(d => d.count >= 35), d => d.id).join("text")
+        .attr("text-anchor", "middle").attr("dy", d => -r(d) - 3).text(d => d.id);
+      sim.nodes(shown).force("link", d3.forceLink(links).id(d => d.id).distance(60).strength(l => Math.min(0.5, l.weight / 60)));
+      sim.alpha(0.8).restart();
+      gState = { links };
+    }
+    function focus(id) {
+      const q = $("#gr-q").value.trim().toLowerCase();
+      if (!id && !q) { node.attr("opacity", 1); link.attr("stroke-opacity", 0.18); label.attr("opacity", 1); return; }
+      const keep = new Set();
+      if (id) { keep.add(id); gState.links.forEach(l => { if (l.source.id === id) keep.add(l.target.id); if (l.target.id === id) keep.add(l.source.id); }); }
+      else nodes.forEach(n => { if (n.id.toLowerCase().includes(q)) keep.add(n.id); });
+      node.attr("opacity", d => keep.has(d.id) ? 1 : 0.12);
+      label.attr("opacity", d => keep.has(d.id) ? 1 : 0.1);
+      link.attr("stroke-opacity", l => id && (l.source.id === id || l.target.id === id) ? 0.6 : 0.04);
+    }
+    sim.on("tick", () => {
+      link.attr("x1", d => d.source.x).attr("y1", d => d.source.y).attr("x2", d => d.target.x).attr("y2", d => d.target.y);
+      node.attr("cx", d => d.x).attr("cy", d => d.y);
+      label.attr("x", d => d.x).attr("y", d => d.y);
+    });
+    $("#gr-legend").innerHTML = Object.entries(CAT).map(([k, [n, v]]) =>
+      `<button data-cat="${k}" aria-pressed="true"><b style="background:var(${v})"></b>${n}</button>`).join("");
+    $("#gr-legend").onclick = e => {
+      const b = e.target.closest("button"); if (!b) return;
+      const on = b.getAttribute("aria-pressed") === "true";
+      b.setAttribute("aria-pressed", !on);
+      on ? hidden.add(b.dataset.cat) : hidden.delete(b.dataset.cat); update();
+    };
+    $("#gr-w").oninput = update;
+    $("#gr-q").oninput = () => focus(null);
+    update();
+  }
+
+  // ---------- Boot ----------
+  async function boot() {
+    try {
+      const [idx, themes, graph] = await Promise.all(["data/index.json", "data/themes.json", "data/graph.json"].map(getJSON));
+      DB = { ...idx, themes, graph };
+    } catch (err) {
+      $("#stats").textContent = "資料載入失敗，請重新整理頁面。";
+      $("#co-pane").innerHTML = `<p class="empty">無法載入資料（${esc(err.message)}）。</p>`;
+      return;
+    }
+    rows = DB.rows;
+    byT = new Map(rows.map(r => [r.t, r]));
+    byName = new Map(rows.map(r => [r.n, r]));
+    DB.sectors.forEach(s => sectorName[s.k] = s.name);
+    DB.graph.nodes.forEach(n => graphCat[n.id] = n.category);
+    entMap = new Map();
+    rows.forEach(r => r.w.forEach(([e, m]) => {
+      if (!entMap.has(e)) entMap.set(e, { e, list: [] });
+      entMap.get(e).list.push({ r, m });
+    }));
+    entities = [...entMap.values()].map(x => (x.n = x.list.length, x)).sort((a, b) => b.n - a.n || a.e.localeCompare(b.e));
+
+    $("#stats").innerHTML = `<b>${fmt.format(rows.length)}</b> 家上市櫃公司 · <b>${DB.sectors.length}</b> 個產業 · <b>${fmt.format(entities.length)}</b> 個關鍵字 · 股價截至 <b>${DB.asof}</b>`;
+    $("#co-sector").innerHTML += DB.sectors.slice().sort((a, b) => b.count - a.count)
+      .map(s => `<option value="${s.k}">${esc(s.name)}（${s.count}）</option>`).join("");
+    let tmr;
+    $("#co-q").oninput = () => { clearTimeout(tmr); tmr = setTimeout(() => { state.coLimit = 200; renderList(); }, 120); };
+    $("#co-sector").onchange = $("#co-sort").onchange = () => { state.coLimit = 200; renderList(); };
+    $("#kw-q").oninput = () => renderKwList();
+    renderList();
+    renderKwList();
+    openCompany("2330", false);
+  }
+  boot();
+})();
+</script>
