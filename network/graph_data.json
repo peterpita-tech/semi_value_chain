@@ -1,224 +1,14 @@
 {
   "nodes": [
     {
-      "id": "adidas",
-      "count": 6,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "SK 海力士",
-      "count": 11,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Callaway",
-      "count": 5,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "NVIDIA",
-      "count": 115,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "台灣集中保管結算所",
-      "count": 14,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "機器人",
-      "count": 21,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "寶成",
-      "count": 8,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "凌華",
-      "count": 8,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "TFT-LCD",
-      "count": 10,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "Toyota",
-      "count": 24,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "Applied Materials",
-      "count": 21,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "聯合再生",
-      "count": 5,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "台灣中油",
-      "count": 47,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "智易",
-      "count": 6,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "FOPLP",
-      "count": 13,
-      "category": "technology",
-      "color": "#2ecc71"
-    },
-    {
-      "id": "HBM",
-      "count": 16,
-      "category": "technology",
-      "color": "#2ecc71"
-    },
-    {
-      "id": "AI 伺服器",
-      "count": 148,
-      "category": "application",
-      "color": "#9b59b6"
-    },
-    {
-      "id": "EPC",
-      "count": 12,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "磊晶",
-      "count": 23,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "TaylorMade",
-      "count": 5,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "雲端服務",
-      "count": 32,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "聯詠",
-      "count": 27,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "矽光子",
-      "count": 15,
-      "category": "technology",
-      "color": "#2ecc71"
-    },
-    {
-      "id": "光寶科",
-      "count": 8,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "滾珠螺桿",
-      "count": 5,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "聯華電子",
-      "count": 27,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "台化",
-      "count": 13,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Micro LED",
+      "id": "綠界科技",
       "count": 9,
-      "category": "technology",
-      "color": "#2ecc71"
-    },
-    {
-      "id": "Ericsson",
-      "count": 8,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "Broadcom",
-      "count": 45,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "台北捷運",
-      "count": 14,
       "category": "taiwan_company",
       "color": "#e74c3c"
     },
     {
-      "id": "Mercedes-Benz",
-      "count": 14,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "台塑集團",
-      "count": 16,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "台灣證券交易所",
-      "count": 16,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Google",
-      "count": 68,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "聯茂",
-      "count": 21,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "英業達",
-      "count": 16,
+      "id": "緯穎",
+      "count": 5,
       "category": "taiwan_company",
       "color": "#e74c3c"
     },
@@ -229,94 +19,10 @@
       "color": "#e74c3c"
     },
     {
-      "id": "資安",
-      "count": 9,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "SK Hynix",
-      "count": 16,
+      "id": "Tesla",
+      "count": 56,
       "category": "international_company",
       "color": "#3498db"
-    },
-    {
-      "id": "LED",
-      "count": 38,
-      "category": "technology",
-      "color": "#2ecc71"
-    },
-    {
-      "id": "CVD",
-      "count": 16,
-      "category": "technology",
-      "color": "#2ecc71"
-    },
-    {
-      "id": "OLED",
-      "count": 18,
-      "category": "technology",
-      "color": "#2ecc71"
-    },
-    {
-      "id": "Walmart",
-      "count": 20,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "Western Digital",
-      "count": 7,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "Honda",
-      "count": 13,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "美利達",
-      "count": 7,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Stanley Black & Decker",
-      "count": 7,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "CMP",
-      "count": 7,
-      "category": "technology",
-      "color": "#2ecc71"
-    },
-    {
-      "id": "ASML",
-      "count": 20,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "Sony",
-      "count": 54,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "Columbia",
-      "count": 8,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "NAND",
-      "count": 6,
-      "category": "technology",
-      "color": "#2ecc71"
     },
     {
       "id": "台電",
@@ -325,68 +31,110 @@
       "color": "#e74c3c"
     },
     {
-      "id": "世界先進",
+      "id": "和碩",
       "count": 17,
       "category": "taiwan_company",
       "color": "#e74c3c"
     },
     {
-      "id": "TTI",
-      "count": 7,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "台灣高鐵",
-      "count": 11,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "記憶體",
-      "count": 39,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "瑞鼎",
-      "count": 8,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "財金資訊",
+      "id": "台光電",
       "count": 20,
       "category": "taiwan_company",
       "color": "#e74c3c"
     },
     {
-      "id": "儲能",
-      "count": 23,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "AI[[伺服器",
-      "count": 33,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Intel",
-      "count": 90,
+      "id": "Audi",
+      "count": 11,
       "category": "international_company",
       "color": "#3498db"
     },
     {
-      "id": "消費性電子",
-      "count": 55,
+      "id": "唐榮",
+      "count": 6,
       "category": "taiwan_company",
       "color": "#e74c3c"
     },
     {
-      "id": "HP",
-      "count": 93,
+      "id": "連接器",
+      "count": 45,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "華通",
+      "count": 11,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "AI 伺服器",
+      "count": 148,
+      "category": "application",
+      "color": "#9b59b6"
+    },
+    {
+      "id": "經濟部",
+      "count": 5,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "臻鼎-KY",
+      "count": 10,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "POY",
+      "count": 7,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "亞泥",
+      "count": 11,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "景碩",
+      "count": 14,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "Wi-Fi",
+      "count": 14,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "Wi-Fi 7",
+      "count": 21,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "半導體",
+      "count": 137,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "Micro LED",
+      "count": 9,
+      "category": "technology",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "Canon",
+      "count": 9,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "GPU",
+      "count": 7,
       "category": "international_company",
       "color": "#3498db"
     },
@@ -397,38 +145,50 @@
       "color": "#e74c3c"
     },
     {
-      "id": "散熱",
-      "count": 36,
+      "id": "燁聯",
+      "count": 10,
       "category": "taiwan_company",
       "color": "#e74c3c"
     },
     {
-      "id": "Bridgestone",
-      "count": 5,
+      "id": "Mastercard",
+      "count": 19,
       "category": "international_company",
       "color": "#3498db"
     },
     {
-      "id": "物聯網",
-      "count": 71,
-      "category": "application",
-      "color": "#9b59b6"
+      "id": "友達",
+      "count": 82,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
     },
     {
-      "id": "Epson",
+      "id": "群創光電",
+      "count": 8,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "Seagate",
       "count": 13,
       "category": "international_company",
       "color": "#3498db"
     },
     {
-      "id": "欣興",
-      "count": 40,
+      "id": "廣達",
+      "count": 63,
       "category": "taiwan_company",
       "color": "#e74c3c"
     },
     {
-      "id": "台北",
-      "count": 21,
+      "id": "NXP",
+      "count": 16,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "台灣集中保管結算所",
+      "count": 14,
       "category": "taiwan_company",
       "color": "#e74c3c"
     },
@@ -439,14 +199,254 @@
       "color": "#e74c3c"
     },
     {
-      "id": "鋼筋",
+      "id": "USB",
+      "count": 16,
+      "category": "technology",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "儲能系統",
+      "count": 12,
+      "category": "application",
+      "color": "#9b59b6"
+    },
+    {
+      "id": "國巨",
+      "count": 11,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "DRAM",
+      "count": 34,
+      "category": "technology",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "永豐餘",
       "count": 10,
       "category": "taiwan_company",
       "color": "#e74c3c"
     },
     {
-      "id": "工業電腦",
-      "count": 53,
+      "id": "Bosch",
+      "count": 37,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "低軌衛星",
+      "count": 45,
+      "category": "application",
+      "color": "#9b59b6"
+    },
+    {
+      "id": "ODM",
+      "count": 82,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "信保基金",
+      "count": 10,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "水泥",
+      "count": 10,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "PVC",
+      "count": 16,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "中磊",
+      "count": 10,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "台郡",
+      "count": 5,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "三竹資訊",
+      "count": 5,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "VR",
+      "count": 12,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "瑞鼎",
+      "count": 8,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "世界先進",
+      "count": 17,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "台灣大哥大",
+      "count": 9,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "美利達",
+      "count": 7,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "聯發科",
+      "count": 56,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "LG",
+      "count": 16,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "元晶",
+      "count": 6,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "工業控制",
+      "count": 8,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "Airbus",
+      "count": 11,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "Nissan",
+      "count": 12,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "Shin-Etsu",
+      "count": 6,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "碳化矽",
+      "count": 22,
+      "category": "material",
+      "color": "#f39c12"
+    },
+    {
+      "id": "Visa",
+      "count": 15,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "銅箔",
+      "count": 55,
+      "category": "material",
+      "color": "#f39c12"
+    },
+    {
+      "id": "盛群",
+      "count": 7,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "資安",
+      "count": 9,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "OmniVision",
+      "count": 10,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "銀泰",
+      "count": 5,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "凌華",
+      "count": 8,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "PCB",
+      "count": 129,
+      "category": "technology",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "BT 載板",
+      "count": 6,
+      "category": "technology",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "Michelin",
+      "count": 5,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "長榮海運",
+      "count": 11,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "HBM",
+      "count": 16,
+      "category": "technology",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "Veeco",
+      "count": 5,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "Adidas",
+      "count": 25,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "光寶科",
+      "count": 8,
       "category": "taiwan_company",
       "color": "#e74c3c"
     },
@@ -463,20 +463,98 @@
       "color": "#3498db"
     },
     {
+      "id": "Cadence",
+      "count": 7,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
       "id": "小米",
       "count": 10,
       "category": "taiwan_company",
       "color": "#e74c3c"
     },
     {
-      "id": "Micron",
-      "count": 53,
+      "id": "光通訊",
+      "count": 20,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "Advantest",
+      "count": 9,
       "category": "international_company",
       "color": "#3498db"
     },
     {
-      "id": "The North Face",
+      "id": "BYD",
+      "count": 17,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "沃旭能源",
+      "count": 8,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "Toyota",
+      "count": 24,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "Synopsys",
+      "count": 10,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "Wi-Fi 6",
+      "count": 9,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "ASML",
+      "count": 20,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "Fortinet",
+      "count": 6,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "Sony",
+      "count": 54,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "Cisco",
+      "count": 27,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "台化",
       "count": 13,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "國產建材實業",
+      "count": 18,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "TPU",
+      "count": 15,
       "category": "international_company",
       "color": "#3498db"
     },
@@ -487,28 +565,154 @@
       "color": "#3498db"
     },
     {
-      "id": "碳化矽",
-      "count": 22,
+      "id": "Ericsson",
+      "count": 8,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "研磨液",
+      "count": 6,
       "category": "material",
       "color": "#f39c12"
     },
     {
-      "id": "景碩",
-      "count": 14,
+      "id": "金管會",
+      "count": 11,
       "category": "taiwan_company",
       "color": "#e74c3c"
     },
     {
-      "id": "Munich Re",
-      "count": 10,
+      "id": "adidas",
+      "count": 6,
       "category": "international_company",
       "color": "#3498db"
     },
     {
-      "id": "OmniVision",
-      "count": 10,
+      "id": "電動車",
+      "count": 133,
+      "category": "application",
+      "color": "#9b59b6"
+    },
+    {
+      "id": "NAND",
+      "count": 6,
+      "category": "technology",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "矽品",
+      "count": 17,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "台塑集團",
+      "count": 16,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "CCL",
+      "count": 16,
       "category": "international_company",
       "color": "#3498db"
+    },
+    {
+      "id": "統一超商",
+      "count": 12,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "豐泰",
+      "count": 9,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "矽晶圓",
+      "count": 33,
+      "category": "material",
+      "color": "#f39c12"
+    },
+    {
+      "id": "Dell",
+      "count": 100,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "Meta",
+      "count": 82,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "Intel",
+      "count": 90,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "Titleist",
+      "count": 5,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "台灣中油",
+      "count": 47,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "氮化鎵",
+      "count": 20,
+      "category": "material",
+      "color": "#f39c12"
+    },
+    {
+      "id": "Epson",
+      "count": 13,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "BASF",
+      "count": 13,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "Samsung",
+      "count": 80,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "中華電信",
+      "count": 35,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "甲山林",
+      "count": 5,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "Nike",
+      "count": 32,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "momo購物網",
+      "count": 15,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
     },
     {
       "id": "研華",
@@ -517,272 +721,20 @@
       "color": "#e74c3c"
     },
     {
-      "id": "Nissan",
-      "count": 12,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "Oracle",
-      "count": 18,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "LG",
-      "count": 16,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "ADAS",
-      "count": 45,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "Microsoft Azure",
-      "count": 13,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "新唐",
-      "count": 5,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Visa",
-      "count": 15,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "上銀",
+      "id": "微星",
       "count": 10,
       "category": "taiwan_company",
       "color": "#e74c3c"
     },
     {
-      "id": "XLPE",
-      "count": 7,
+      "id": "Applied Materials",
+      "count": 21,
       "category": "international_company",
       "color": "#3498db"
     },
     {
-      "id": "京元電子",
-      "count": 12,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "國巨",
-      "count": 11,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "IPA",
-      "count": 5,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "台泥",
-      "count": 13,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Canon",
-      "count": 9,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "Palo Alto Networks",
-      "count": 8,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "證券櫃檯買賣中心",
-      "count": 13,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "導線架",
-      "count": 33,
-      "category": "material",
-      "color": "#f39c12"
-    },
-    {
-      "id": "SSD",
-      "count": 17,
-      "category": "technology",
-      "color": "#2ecc71"
-    },
-    {
-      "id": "離岸風電",
-      "count": 13,
-      "category": "application",
-      "color": "#9b59b6"
-    },
-    {
-      "id": "Continental",
-      "count": 28,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "台灣水泥",
-      "count": 50,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "電源管理 IC",
-      "count": 12,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "健鼎",
-      "count": 7,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "燁聯",
-      "count": 10,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "中磊",
-      "count": 10,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Veeco",
-      "count": 5,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "緯創",
-      "count": 40,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Home Depot",
-      "count": 17,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "CIS",
-      "count": 15,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "Wi-Fi",
-      "count": 14,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "Rolls-Royce",
-      "count": 12,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "Lenovo",
-      "count": 47,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "不鏽鋼",
-      "count": 12,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Arm",
-      "count": 13,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "Makita",
-      "count": 10,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "AMD",
-      "count": 65,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "NXP",
-      "count": 16,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "USB",
-      "count": 16,
-      "category": "technology",
-      "color": "#2ecc71"
-    },
-    {
-      "id": "CoWoS",
-      "count": 39,
-      "category": "technology",
-      "color": "#2ecc71"
-    },
-    {
-      "id": "鴻海",
-      "count": 73,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "豐興鋼鐵",
-      "count": 24,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "仁寶",
-      "count": 33,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "AIoT",
-      "count": 22,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "三竹資訊",
-      "count": 5,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "ODM",
-      "count": 82,
+      "id": "Ford",
+      "count": 20,
       "category": "international_company",
       "color": "#3498db"
     },
@@ -793,10 +745,130 @@
       "color": "#e74c3c"
     },
     {
-      "id": "瑞昱",
-      "count": 33,
+      "id": "全家便利商店",
+      "count": 15,
       "category": "taiwan_company",
       "color": "#e74c3c"
+    },
+    {
+      "id": "台泥",
+      "count": 13,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "台北捷運",
+      "count": 14,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "華新麗華",
+      "count": 24,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "自動化",
+      "count": 49,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "不鏽鋼",
+      "count": 12,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "PChome",
+      "count": 17,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "中央銀行",
+      "count": 18,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "HP",
+      "count": 93,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "中美晶",
+      "count": 7,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "台灣期貨交易所",
+      "count": 12,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "Microsoft",
+      "count": 72,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "MOSFET",
+      "count": 45,
+      "category": "technology",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "台北",
+      "count": 21,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "南亞電路板",
+      "count": 10,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "Callaway",
+      "count": 5,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "PCIe",
+      "count": 13,
+      "category": "technology",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "LCD",
+      "count": 12,
+      "category": "technology",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "Nokia",
+      "count": 8,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "IPC",
+      "count": 19,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "Munich Re",
+      "count": 10,
+      "category": "international_company",
+      "color": "#3498db"
     },
     {
       "id": "技嘉",
@@ -805,7 +877,169 @@
       "color": "#e74c3c"
     },
     {
-      "id": "Fanuc",
+      "id": "Teradyne",
+      "count": 6,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "東和鋼鐵",
+      "count": 26,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "台積電",
+      "count": 215,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "蝕刻",
+      "count": 22,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "Mini LED",
+      "count": 14,
+      "category": "technology",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "SK Hynix",
+      "count": 16,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "京東方",
+      "count": 14,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "EPC",
+      "count": 12,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "MLCC",
+      "count": 17,
+      "category": "technology",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "Mercedes-Benz",
+      "count": 14,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "正隆",
+      "count": 6,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "晶元光電",
+      "count": 9,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "Supermicro",
+      "count": 7,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "Stanley Black & Decker",
+      "count": 7,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "New Balance",
+      "count": 7,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "聯電",
+      "count": 69,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "HPE",
+      "count": 7,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "緯創",
+      "count": 40,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "光收發模組",
+      "count": 9,
+      "category": "technology",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "銅箔基板",
+      "count": 7,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "健鼎",
+      "count": 7,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "力成",
+      "count": 16,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "工業電腦",
+      "count": 53,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "RE100",
+      "count": 8,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "亞洲水泥",
+      "count": 28,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "鋼筋",
+      "count": 10,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "聯茂",
+      "count": 21,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "Microsoft Azure",
       "count": 13,
       "category": "international_company",
       "color": "#3498db"
@@ -817,530 +1051,20 @@
       "color": "#2ecc71"
     },
     {
-      "id": "PCB",
-      "count": 129,
-      "category": "technology",
-      "color": "#2ecc71"
-    },
-    {
-      "id": "CCL",
-      "count": 16,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "Cisco",
-      "count": 27,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "巨大機械",
-      "count": 5,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "華新科",
-      "count": 9,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "南亞電路板",
-      "count": 10,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Synopsys",
-      "count": 10,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "OEM",
-      "count": 60,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "億光",
-      "count": 10,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Boeing",
-      "count": 13,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "長榮海運",
-      "count": 11,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "VMware",
-      "count": 7,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "樺漢",
-      "count": 8,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Seagate",
-      "count": 13,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "中鋼",
-      "count": 78,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Patagonia",
-      "count": 9,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
       "id": "Under Armour",
       "count": 14,
       "category": "international_company",
       "color": "#3498db"
     },
     {
-      "id": "EUV",
-      "count": 10,
+      "id": "CMP",
+      "count": 7,
       "category": "technology",
       "color": "#2ecc71"
     },
     {
-      "id": "南亞",
-      "count": 31,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "MLCC",
-      "count": 17,
-      "category": "technology",
-      "color": "#2ecc71"
-    },
-    {
-      "id": "Shin-Etsu",
-      "count": 6,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "TPU",
-      "count": 15,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "京東方",
-      "count": 14,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "GM",
-      "count": 16,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "BMW",
-      "count": 25,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "緯穎",
-      "count": 5,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "連接器",
-      "count": 45,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "銅箔基板",
-      "count": 7,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "台積電",
-      "count": 215,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Lowe's",
-      "count": 15,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "Type-C",
-      "count": 12,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "玻纖布",
-      "count": 17,
-      "category": "material",
-      "color": "#f39c12"
-    },
-    {
-      "id": "南電",
-      "count": 9,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Dell",
-      "count": 100,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "光通訊",
-      "count": 20,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Siemens",
-      "count": 20,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "家樂福",
-      "count": 15,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "光收發模組",
-      "count": 9,
-      "category": "technology",
-      "color": "#2ecc71"
-    },
-    {
-      "id": "廣達",
-      "count": 63,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "低軌衛星",
-      "count": 45,
-      "category": "application",
-      "color": "#9b59b6"
-    },
-    {
-      "id": "Adidas",
-      "count": 25,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "RE100",
-      "count": 8,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "LCD",
-      "count": 12,
-      "category": "technology",
-      "color": "#2ecc71"
-    },
-    {
-      "id": "PVC",
-      "count": 16,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "Covestro",
-      "count": 7,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "遠東新",
-      "count": 20,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "POY",
-      "count": 7,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "國產建材實業",
-      "count": 18,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Tokyo Electron",
-      "count": 9,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "永豐餘",
-      "count": 10,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "PON",
-      "count": 8,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "甲山林",
-      "count": 5,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "HPE",
-      "count": 7,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "自動化",
-      "count": 49,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Wi-Fi 6",
-      "count": 9,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "Samsung",
-      "count": 80,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "Microsoft",
-      "count": 72,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "友達光電",
-      "count": 7,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "矽晶圓",
-      "count": 33,
-      "category": "material",
-      "color": "#f39c12"
-    },
-    {
-      "id": "EMS",
-      "count": 35,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "探針卡",
-      "count": 13,
-      "category": "material",
-      "color": "#f39c12"
-    },
-    {
-      "id": "Infineon",
-      "count": 22,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "唐榮",
-      "count": 6,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Fortinet",
-      "count": 6,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "半導體",
-      "count": 137,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "盛群",
-      "count": 7,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "AI",
-      "count": 160,
-      "category": "technology",
-      "color": "#2ecc71"
-    },
-    {
-      "id": "BASF",
-      "count": 13,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "Nokia",
-      "count": 8,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "台北101",
-      "count": 8,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "DDR5",
-      "count": 9,
-      "category": "technology",
-      "color": "#2ecc71"
-    },
-    {
-      "id": "Yamaha",
-      "count": 12,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "中美晶",
-      "count": 7,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Mini LED",
-      "count": 14,
-      "category": "technology",
-      "color": "#2ecc71"
-    },
-    {
-      "id": "宏碁",
-      "count": 27,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "亞泥",
-      "count": 11,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "砷化鎵",
-      "count": 7,
-      "category": "material",
-      "color": "#f39c12"
-    },
-    {
-      "id": "電動輔助自行車",
-      "count": 7,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Mastercard",
-      "count": 19,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "IGBT",
-      "count": 23,
-      "category": "technology",
-      "color": "#2ecc71"
-    },
-    {
-      "id": "HDI",
-      "count": 7,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "BYD",
-      "count": 17,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "台光電",
-      "count": 20,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "液冷",
-      "count": 9,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "矽品",
-      "count": 17,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "全家便利商店",
-      "count": 15,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "和碩",
-      "count": 17,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Lam Research",
-      "count": 12,
+      "id": "Lenovo",
+      "count": 47,
       "category": "international_company",
       "color": "#3498db"
     },
@@ -1351,80 +1075,8 @@
       "color": "#3498db"
     },
     {
-      "id": "Supermicro",
-      "count": 7,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "銀泰",
-      "count": 5,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Meta",
-      "count": 82,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "晶元光電",
-      "count": 9,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Bosch",
-      "count": 37,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "PE管",
-      "count": 5,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Swiss Re",
-      "count": 10,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "元晶",
-      "count": 6,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Broadcom 博通",
-      "count": 5,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "豐泰",
-      "count": 9,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "萬華化學",
-      "count": 6,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Teradyne",
-      "count": 6,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "PChome",
-      "count": 17,
+      "id": "Google",
+      "count": 68,
       "category": "international_company",
       "color": "#3498db"
     },
@@ -1435,200 +1087,8 @@
       "color": "#e74c3c"
     },
     {
-      "id": "水冷",
-      "count": 8,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Apple",
-      "count": 96,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "Wi-Fi 7",
-      "count": 21,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "微星",
-      "count": 10,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "南亞塑膠",
-      "count": 20,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "momo購物網",
-      "count": 15,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "IPC",
-      "count": 19,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "5G",
-      "count": 129,
-      "category": "technology",
-      "color": "#2ecc71"
-    },
-    {
-      "id": "儲能系統",
-      "count": 12,
-      "category": "application",
-      "color": "#9b59b6"
-    },
-    {
-      "id": "中央再保險",
-      "count": 5,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "力成",
-      "count": 16,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "海悅國際",
-      "count": 13,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "全聯",
-      "count": 13,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "VCSEL",
-      "count": 10,
-      "category": "technology",
-      "color": "#2ecc71"
-    },
-    {
       "id": "Panasonic",
       "count": 33,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "陽明海運",
-      "count": 11,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Airbus",
-      "count": 11,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "研磨液",
-      "count": 6,
-      "category": "material",
-      "color": "#f39c12"
-    },
-    {
-      "id": "線性滑軌",
-      "count": 8,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "SpaceX",
-      "count": 24,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "營造",
-      "count": 12,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "DRAM",
-      "count": 34,
-      "category": "technology",
-      "color": "#2ecc71"
-    },
-    {
-      "id": "電動車",
-      "count": 133,
-      "category": "application",
-      "color": "#9b59b6"
-    },
-    {
-      "id": "Cadence",
-      "count": 7,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "Nike",
-      "count": 32,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "新竹",
-      "count": 14,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "台燿",
-      "count": 13,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "FPC",
-      "count": 10,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "華碩",
-      "count": 51,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Titleist",
-      "count": 5,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "GPU",
-      "count": 7,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "MDI",
-      "count": 6,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "Audi",
-      "count": 11,
       "category": "international_company",
       "color": "#3498db"
     },
@@ -1639,7 +1099,895 @@
       "color": "#3498db"
     },
     {
+      "id": "力積電",
+      "count": 10,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "EMS",
+      "count": 35,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "雲端服務",
+      "count": 32,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "磊晶",
+      "count": 23,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "寶成",
+      "count": 8,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "CoWoS",
+      "count": 39,
+      "category": "technology",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "FOPLP",
+      "count": 13,
+      "category": "technology",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "5G",
+      "count": 129,
+      "category": "technology",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "南電",
+      "count": 9,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "聯合再生",
+      "count": 5,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "OPPO",
+      "count": 9,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "華新科",
+      "count": 9,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "HDMI",
+      "count": 8,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "散熱",
+      "count": 36,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "PON",
+      "count": 8,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "萬華化學",
+      "count": 6,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "宏碁",
+      "count": 27,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "仁寶",
+      "count": 33,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "TFT-LCD",
+      "count": 10,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "台灣證券交易所",
+      "count": 16,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "IPA",
+      "count": 5,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "砷化鎵",
+      "count": 7,
+      "category": "material",
+      "color": "#f39c12"
+    },
+    {
+      "id": "立錡",
+      "count": 6,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "國瑞汽車",
+      "count": 6,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "樺漢",
+      "count": 8,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "新唐",
+      "count": 5,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "華碩",
+      "count": 51,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "儲能",
+      "count": 23,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "PE管",
+      "count": 5,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "車用電子",
+      "count": 25,
+      "category": "application",
+      "color": "#9b59b6"
+    },
+    {
+      "id": "證券櫃檯買賣中心",
+      "count": 13,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "CIS",
+      "count": 15,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "新竹",
+      "count": 14,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "SSD",
+      "count": 17,
+      "category": "technology",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "電源管理 IC",
+      "count": 12,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "智易",
+      "count": 6,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "南亞塑膠",
+      "count": 20,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "資料中心",
+      "count": 81,
+      "category": "application",
+      "color": "#9b59b6"
+    },
+    {
+      "id": "Swiss Re",
+      "count": 10,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "導線架",
+      "count": 33,
+      "category": "material",
+      "color": "#f39c12"
+    },
+    {
+      "id": "海悅國際",
+      "count": 13,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "Walmart",
+      "count": 20,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "Honda",
+      "count": 13,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "Home Depot",
+      "count": 17,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "ABF 載板",
+      "count": 14,
+      "category": "technology",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "Costco",
+      "count": 11,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "AWS",
+      "count": 41,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "台灣高鐵",
+      "count": 11,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "友達光電",
+      "count": 7,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "伺服器",
+      "count": 84,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "AMD",
+      "count": 65,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "Siemens",
+      "count": 20,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "Covestro",
+      "count": 7,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "離岸風電",
+      "count": 13,
+      "category": "application",
+      "color": "#9b59b6"
+    },
+    {
+      "id": "上銀",
+      "count": 10,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "家樂福",
+      "count": 15,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "Boeing",
+      "count": 13,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "VCSEL",
+      "count": 10,
+      "category": "technology",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "TaylorMade",
+      "count": 5,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "台北101",
+      "count": 8,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "Arm",
+      "count": 13,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "Lam Research",
+      "count": 12,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "南亞",
+      "count": 31,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "BMW",
+      "count": 25,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "日月光投控",
+      "count": 66,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "聯華電子",
+      "count": 27,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "財金資訊",
+      "count": 20,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "Broadcom 博通",
+      "count": 5,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "物聯網",
+      "count": 71,
+      "category": "application",
+      "color": "#9b59b6"
+    },
+    {
+      "id": "GM",
+      "count": 16,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "SpaceX",
+      "count": 24,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "台燿",
+      "count": 13,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "線性滑軌",
+      "count": 8,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "The North Face",
+      "count": 13,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "EUV",
+      "count": 10,
+      "category": "technology",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "AI",
+      "count": 160,
+      "category": "technology",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "NVIDIA",
+      "count": 115,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "ADAS",
+      "count": 45,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "Micron",
+      "count": 53,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "豐興鋼鐵",
+      "count": 24,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
       "id": "中龍鋼鐵",
+      "count": 8,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "EVA",
+      "count": 17,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "陽明海運",
+      "count": 11,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "探針卡",
+      "count": 13,
+      "category": "material",
+      "color": "#f39c12"
+    },
+    {
+      "id": "Broadcom",
+      "count": 45,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "Lowe's",
+      "count": 15,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "OLED",
+      "count": 18,
+      "category": "technology",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "億光",
+      "count": 10,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "TTI",
+      "count": 7,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "欣興",
+      "count": 40,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "太陽能",
+      "count": 26,
+      "category": "application",
+      "color": "#9b59b6"
+    },
+    {
+      "id": "瑞昱",
+      "count": 33,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "Oracle",
+      "count": 18,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "Makita",
+      "count": 10,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "Fanuc",
+      "count": 13,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "DDR5",
+      "count": 9,
+      "category": "technology",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "中央再保險",
+      "count": 5,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "XLPE",
+      "count": 7,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "機器人",
+      "count": 21,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "VMware",
+      "count": 7,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "FPC",
+      "count": 10,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "第三代[[半導體",
+      "count": 5,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "LED",
+      "count": 38,
+      "category": "technology",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "Type-C",
+      "count": 12,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "聯詠",
+      "count": 27,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "Tokyo Electron",
+      "count": 9,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "財政部",
+      "count": 7,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "MSI",
+      "count": 7,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "SoC",
+      "count": 12,
+      "category": "technology",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "MDI",
+      "count": 6,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "Google Cloud",
+      "count": 10,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "奇景光電",
+      "count": 12,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "Aixtron",
+      "count": 5,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "台灣水泥",
+      "count": 50,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "IGBT",
+      "count": 23,
+      "category": "technology",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "記憶體",
+      "count": 39,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "滾珠螺桿",
+      "count": 5,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "CVD",
+      "count": 16,
+      "category": "technology",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "Yamaha",
+      "count": 12,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "OEM",
+      "count": 60,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "MCU",
+      "count": 33,
+      "category": "technology",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "Patagonia",
+      "count": 9,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "京元電子",
+      "count": 12,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "LG Display",
+      "count": 7,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "電動輔助自行車",
+      "count": 7,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "Apple",
+      "count": 96,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "Bridgestone",
+      "count": 5,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "Columbia",
+      "count": 8,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "中鋼",
+      "count": 78,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "遠東新",
+      "count": 20,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "消費性電子",
+      "count": 55,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "矽光子",
+      "count": 15,
+      "category": "technology",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "Western Digital",
+      "count": 7,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "SK 海力士",
+      "count": 11,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "Amazon",
+      "count": 65,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "巨大機械",
+      "count": 5,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "台達電",
+      "count": 39,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "Rolls-Royce",
+      "count": 12,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "HDI",
+      "count": 7,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "ASIC",
+      "count": 10,
+      "category": "technology",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "網通",
+      "count": 56,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "AI[[伺服器",
+      "count": 33,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "CPO",
+      "count": 14,
+      "category": "technology",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "Continental",
+      "count": 28,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "Palo Alto Networks",
+      "count": 8,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "全聯",
+      "count": 13,
+      "category": "taiwan_company",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "Qualcomm",
+      "count": 35,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "Infineon",
+      "count": 22,
+      "category": "international_company",
+      "color": "#3498db"
+    },
+    {
+      "id": "水冷",
       "count": 8,
       "category": "taiwan_company",
       "color": "#e74c3c"
@@ -1651,386 +1999,38 @@
       "color": "#e74c3c"
     },
     {
-      "id": "氮化鎵",
-      "count": 20,
-      "category": "material",
-      "color": "#f39c12"
-    },
-    {
-      "id": "華通",
-      "count": 11,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "PCIe",
-      "count": 13,
-      "category": "technology",
-      "color": "#2ecc71"
-    },
-    {
-      "id": "太陽能",
-      "count": 26,
-      "category": "application",
-      "color": "#9b59b6"
-    },
-    {
-      "id": "奇景光電",
+      "id": "營造",
       "count": 12,
       "category": "taiwan_company",
       "color": "#e74c3c"
     },
     {
-      "id": "工業控制",
-      "count": 8,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "LG Display",
-      "count": 7,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "Advantest",
-      "count": 9,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "MCU",
-      "count": 33,
-      "category": "technology",
-      "color": "#2ecc71"
-    },
-    {
-      "id": "SoC",
-      "count": 12,
-      "category": "technology",
-      "color": "#2ecc71"
-    },
-    {
-      "id": "群創光電",
-      "count": 8,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "經濟部",
-      "count": 5,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "網通",
-      "count": 56,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "正隆",
-      "count": 6,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "HDMI",
-      "count": 8,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "金管會",
-      "count": 11,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "OPPO",
-      "count": 9,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "綠界科技",
-      "count": 9,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "ASIC",
-      "count": 10,
-      "category": "technology",
-      "color": "#2ecc71"
-    },
-    {
-      "id": "Michelin",
-      "count": 5,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "伺服器",
-      "count": 84,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "蝕刻",
+      "id": "AIoT",
       "count": 22,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "華新麗華",
-      "count": 24,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Qualcomm",
-      "count": 35,
       "category": "international_company",
       "color": "#3498db"
     },
     {
-      "id": "沃旭能源",
-      "count": 8,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
+      "id": "玻纖布",
+      "count": 17,
+      "category": "material",
+      "color": "#f39c12"
     },
     {
-      "id": "統一超商",
-      "count": 12,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "信保基金",
-      "count": 10,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "台灣期貨交易所",
-      "count": 12,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "立錡",
-      "count": 6,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "財政部",
-      "count": 7,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Amazon",
-      "count": 65,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "MSI",
-      "count": 7,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "中央銀行",
-      "count": 18,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "日月光投控",
-      "count": 66,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "友達",
-      "count": 82,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "Aixtron",
-      "count": 5,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "ABF 載板",
-      "count": 14,
-      "category": "technology",
-      "color": "#2ecc71"
-    },
-    {
-      "id": "國瑞汽車",
-      "count": 6,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "臻鼎-KY",
-      "count": 10,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "VR",
-      "count": 12,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "Google Cloud",
-      "count": 10,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "MOSFET",
-      "count": 45,
-      "category": "technology",
-      "color": "#2ecc71"
-    },
-    {
-      "id": "第三代[[半導體",
-      "count": 5,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "聯電",
-      "count": 69,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "CPO",
-      "count": 14,
-      "category": "technology",
-      "color": "#2ecc71"
-    },
-    {
-      "id": "New Balance",
-      "count": 7,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "台灣大哥大",
+      "id": "液冷",
       "count": 9,
       "category": "taiwan_company",
       "color": "#e74c3c"
     },
     {
-      "id": "台達電",
-      "count": 39,
+      "id": "鴻海",
+      "count": 73,
       "category": "taiwan_company",
       "color": "#e74c3c"
     },
     {
-      "id": "資料中心",
-      "count": 81,
-      "category": "application",
-      "color": "#9b59b6"
-    },
-    {
-      "id": "AWS",
-      "count": 41,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "東和鋼鐵",
-      "count": 26,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "車用電子",
-      "count": 25,
-      "category": "application",
-      "color": "#9b59b6"
-    },
-    {
-      "id": "Tesla",
-      "count": 56,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "Costco",
-      "count": 11,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "BT 載板",
-      "count": 6,
-      "category": "technology",
-      "color": "#2ecc71"
-    },
-    {
-      "id": "Ford",
-      "count": 20,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "聯發科",
-      "count": 56,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "台郡",
-      "count": 5,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "亞洲水泥",
-      "count": 28,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "中華電信",
-      "count": 35,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "水泥",
-      "count": 10,
-      "category": "taiwan_company",
-      "color": "#e74c3c"
-    },
-    {
-      "id": "銅箔",
-      "count": 55,
-      "category": "material",
-      "color": "#f39c12"
-    },
-    {
-      "id": "EVA",
-      "count": 17,
-      "category": "international_company",
-      "color": "#3498db"
-    },
-    {
-      "id": "力積電",
-      "count": 10,
+      "id": "英業達",
+      "count": 16,
       "category": "taiwan_company",
       "color": "#e74c3c"
     }
